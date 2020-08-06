@@ -28,6 +28,24 @@ Things get hilarious when one tries to force the usage of cpu rendering: Surface
 
 TL;DR: get your GPU up
 
-----
+------
 
 Android-mainline has NO skip_initramfs, you can do funky stuff \o/
+
+------
+
+List of firmware needed with the mainline kernel (keep the list updated):
+
+* Adreno
+
+* Venus
+
+* Wi-Fi
+
+* ADSP
+
+* CDSP (where applicable)
+
+* Q6/MSS/Modem
+
+------
