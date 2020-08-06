@@ -20,8 +20,14 @@ if (!IS_ENABLED(CONFIG_ANDROID_BINDERFS) &&
 	}
 }
   ```
+------
 
+swrast gallium driver doesn't seem to expose EGL (at least on ancient bundled mesa 17), so most likely one needs proper GPU support.
 
-swrast gallium driver doesn't seem to expose EGL (at least on ancient bundled mesa 17), so most likely one needs proper GPU support..
+Things get hilarious when one tries to force the usage of cpu rendering: Surfaceflinger tries really hard to find drm/msm libs in /vendor once it notices MDSS is available in kernel, and if you try to disable it - you have no drm framebuffers (yikes).
+
+TL;DR: get your GPU up
+
+----
 
 Android-mainline has NO skip_initramfs, you can do funky stuff \o/
